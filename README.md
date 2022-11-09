@@ -30,3 +30,14 @@ Delete a rant (comment) about a particular place
 
 ## GET*
 404 page (matches any route not defined above)
+
+
+Strings we need:
+
+name(string)
+
+state(string)
+
+cuisines(string)
+
+pic(string)
