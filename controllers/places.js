@@ -1,24 +1,27 @@
+
 const router = require('express').Router()
+const db = require("../models")
 
-// GET /places
-router.get('/', (req, res) => {
-  let places = [{
-    name: 'H-Thai-ML',
-    city: 'Seattle',
-    state: 'WA',
-    cuisines: 'Thai, Pan-Asian',
-    pic: 'http://placekitten.com/250/250'
-  }, {
-    name: 'Coding Cat Cafe',
-    city: 'Phoenix',
-    state: 'AZ',
-    cuisines: 'Coffee, Bakery',
-    pic: 'http://placekitten.com/250/250'
-  }]
-  
-  res.render('places/index', { places })
+const { Place, Comment, User } = db
 
-  })
-  
+router.post('/', async (req, res) => {
+    if (!req.body.pic) {
+        req.body.pic = 'http://placekitten.com/400/400'
+    }
+    if (!req.body.city) {
+        req.body.city = 'Anytown'
+    }
+    if (!req.body.state) {
+        req.body.state = 'USA'
+    }
+    const place = await Place.create(req.body)
+    res.json(place)
+})
 
-module.exports = router
+
+router.get('/', async (req, res) => {
+    const places = await Place.findAll()
+    res.json(places)
+})
+
+app.listen(process.env.PORT)
