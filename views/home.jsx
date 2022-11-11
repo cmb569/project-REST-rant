@@ -1,5 +1,5 @@
 const React = require('react')
-const Def = require('./')
+const Def = require('./default.jsx')
 
 function home () {
     return (
