@@ -1,5 +1,6 @@
 const React = require('react')
-const Def = require('../default')
+const Def = require('../default.jsx')
+
 
 function index () {
     return (
@@ -10,6 +11,6 @@ function index () {
       </Def>
     )
   }
-  
+
 
 module.exports = index
