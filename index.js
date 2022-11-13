@@ -7,7 +7,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 
-
+app.use(express.urlencoded({ extended: true }))
 
 app.use('/places', router)
 
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     res.render('error404')
   })
 
-  app.use(express.urlencoded({ extended: true }))
+
 
 
 app.listen(process.env.PORT)
