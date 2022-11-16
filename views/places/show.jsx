@@ -4,7 +4,8 @@ const Def = require('../default')
 
 
 /////reminder: You will not be able to edit. That will be further down in the rest-rant.////
-function show (data) {
+function show (data) 
+{
     return (
         <Def>
           <main>
@@ -16,7 +17,12 @@ function show (data) {
             <h2>Comments</h2>
             <p>No Comments</p>
             <a href={`/places/${data.id}/edit`} className="btn btn-warning"> Edit</a>     
-            <a href={`/places/${data.id}?_method=DELETE`} className="btn btn-warning">Delete</a>
+            <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+  <button type="submit" className="btn btn-danger">
+    Delete
+  </button>
+</form> 
+
           
     
            </main>
