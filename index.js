@@ -4,6 +4,7 @@ const app = express()
 const router = require("./controllers/places")
 const methodOverride = require('method-override')
 
+
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
