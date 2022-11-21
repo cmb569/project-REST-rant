@@ -2,6 +2,30 @@ const React = require('react')
 const Def = require('../default')
 
 
+const React = require('react')
+const Def = require('../default')
+
+function new_form (data) {
+  let message = ''                 
+    if (data.message) {
+      message = (
+        <h4 className="alert-danger">
+          {data.message}
+        </h4>
+      )
+    }
+    return (
+        <Def>
+          <main>
+            <h1>Add a New Place</h1>
+            {message}                 
+            ...
+          </main>
+        </Def>
+    )
+}
+
+module.exports = new_form
 
 /////reminder: You will not be able to edit. That will be further down in the rest-rant.////
 function show (data) 
