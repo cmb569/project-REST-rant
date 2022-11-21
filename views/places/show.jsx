@@ -2,7 +2,7 @@ const React = require('react')
 const Def = require('../default')
 
 
-const React = require('react')
+/*const React = require('react')
 const Def = require('../default')
 
 function new_form (data) {
@@ -25,7 +25,7 @@ function new_form (data) {
     )
 }
 
-module.exports = new_form
+module.exports = new_form*/
 
 /////reminder: You will not be able to edit. That will be further down in the rest-rant.////
 function show (data) 
