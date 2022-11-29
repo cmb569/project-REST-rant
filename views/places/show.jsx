@@ -39,7 +39,7 @@ function show (data)
     comments = data.place.comments.map(c => {
       return (
         <div className="border">
-          <h2 className="rant">{c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}</h2>
+          <h2 className="rant">{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
           <h4>{c.content}</h4>
           <h3>
             <stong>- {c.author}</stong>
@@ -102,7 +102,7 @@ function show (data)
   </div>
   <div className="form-group">
     <label htmlFor="rant">Rant?</label>
-    <input className="form-control" id="rant" name="rant" type="checkbox" value={false} />
+    <input className="form-control" id="rant" name="rant" type="checkbox" value={true} />
   </div>
   <input className="btn btn-primary" type="submit" value="Add Comment"/>
   </form>
