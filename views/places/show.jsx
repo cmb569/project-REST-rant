@@ -98,7 +98,7 @@ function show (data)
   </div>
   <div className="form-group">
     <label htmlForr="stars">star rating</label>
-    <input type="number" className="form-control" id="stars" name="stars" step={0.5} value={5} />
+    <input type="number" className="form-control" id="stars" min={0.5} max={5} name="stars" step={0.5} value={5} />
   </div>
   <div className="form-group">
     <label htmlFor="rant">Rant?</label>
